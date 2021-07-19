@@ -1,0 +1,979 @@
+{
+	"info": {
+		"_postman_id": "b3aea828-7e2f-4bf9-8dc1-33da83b09832",
+		"name": "Hoteles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Crear Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Valmirr",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammirr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar Sesión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDk3NzE4YjI0YTdhMTE3ODA0ZWY0OTAiLCJub21icmUiOiJWYWxtaXJyIiwidXNlcm5hbWUiOiJWbGFtbWlyIiwicm9sIjoiUk9MX0NMSUVOVEUiLCJpYXQiOjE2MjA1Mzc3NjIsImV4cCI6MTYyMDg4MzM2Mn0.BEOxu5dIgocQ4xjwIhj1ehZrYCvH_DAzi00_bWddo8M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/eliminarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMDUyNzQwOSwiZXhwIjoxNjIwODczMDA5fQ.VAyuZgooeTIm_4pQTN27bqVf4-LhIeUDcapyU1bVsic",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Valmir",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios registrados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTI3MTEyLCJleHAiOjE2MjA4NzI3MTJ9.pZY5s8y4oYFjpFFOcsKmzD-GBLkPp482AgNOCkiOI5Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Reservacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hotelNombre",
+									"value": "Hotel1",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammi",
+									"type": "text"
+								},
+								{
+									"key": "habitacionNombre",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "FechaIni",
+									"value": "2021-05-27",
+									"type": "text"
+								},
+								{
+									"key": "FechaFin",
+									"value": "2021-05-29",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarReservacion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarReservacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGE4NWViODM1ZmJmMDBiMDA2OTYwM2YiLCJub21icmUiOiJWYWxtaXJyIiwidXNlcm5hbWUiOiJWbGFtbWlyciIsInJvbCI6IlJPTF9DTElFTlRFIiwiaWF0IjoxNjIxNjQ3MDQyLCJleHAiOjE2MjIwNzkwNDJ9.LVkvgfhG5FJmz1_NlKQ67sMljNPA2jzFRkBhDxYEBDQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/historial",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"historial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservaciones por hotel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTY0OTI4NiwiZXhwIjoxNjIyMDgxMjg2fQ.zIJgfBk3cjgiaRI7XDXRkyOdlJjLrght6eZLmrYnjp8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/reservacionesHechas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reservacionesHechas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario Hospedado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTc5MjgzNCwiZXhwIjoxNjIyNjU2ODM0fQ.Yc5yYtRosoXB4dOD-SfBgrKO3aRDHwP12DYV_j1WA5Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "Vlammi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuarioHospedado",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarioHospedado"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hoteles",
+			"item": [
+				{
+					"name": "Buscar Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/BuscarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"BuscarHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Hotel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel123",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "zona 18",
+									"type": "text"
+								},
+								{
+									"key": "administrador",
+									"value": "60787ceb7b0e861fd8e78ca7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Hotel",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hoteles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicios",
+			"item": [
+				{
+					"name": "Eliminar Servicio",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Comida2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarServicio",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarServicio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Servicio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Comida",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "hotelNombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarServicios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarServicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servicios por Hotel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/buscarServiciosporHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"buscarServiciosporHotel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Eventos",
+			"item": [
+				{
+					"name": "Eventos por Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/buscarEventosporHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"buscarEventosporHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Evento",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Musicales2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarEvento",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarEvento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar evento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipo",
+									"value": "Musicales",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "canciones muchos",
+									"type": "text"
+								},
+								{
+									"key": "nombreHotel",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarevento",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarevento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habitaciones",
+			"item": [
+				{
+					"name": "AgregarHabitacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Dos",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "nombreHotel",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarHabitacion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarHabitacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habitacion Por Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Hotel1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/habitacionPorHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"habitacionPorHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Habitacion",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4NzZmZWFkYTgxOTBmNjRjNDEzYzgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIwNTMyNTUyLCJleHAiOjE2MjA4NzgxNTJ9.7RHociWkYnZ_iPUNNSeLNayczZlopgOKX9xC0XnwN9o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarHabitacion",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarHabitacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habitaciones Disponibles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTY1MTY3OCwiZXhwIjoxNjIyMDgzNjc4fQ.KSsWdVgghjlxWqJ_cv-PNYLPJU-W5FeQkTFMznwTILk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/habitacionesDisponibles",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"habitacionesDisponibles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "Factura",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTc5NjkyMiwiZXhwIjoxNjIyNjYwOTIyfQ.ABm__HEv8HDvt_qWiGoAEwywt_DitlghNmzsgAYtHo4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreUsuario",
+									"value": "Vlammi",
+									"type": "text"
+								},
+								{
+									"key": "habitacionNombre",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarFactura",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarServicio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTc5NjkyMiwiZXhwIjoxNjIyNjYwOTIyfQ.ABm__HEv8HDvt_qWiGoAEwywt_DitlghNmzsgAYtHo4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "identificador",
+									"value": "60aaa4965482cd0790676ce1",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "puede ser pa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarServicioFactura",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarServicioFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Factura",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTc5NjkyMiwiZXhwIjoxNjIyNjYwOTIyfQ.ABm__HEv8HDvt_qWiGoAEwywt_DitlghNmzsgAYtHo4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idFactura",
+									"value": "60aaa4965482cd0790676ce1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/cancelarFactura",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cancelarFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finalizar Factura",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDc4N2NlYjdiMGU4NjFmZDhlNzhjYTciLCJub21icmUiOiJWYWxtaXIiLCJ1c2VybmFtZSI6IlZsYW1taSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTc5NjkyMiwiZXhwIjoxNjIyNjYwOTIyfQ.ABm__HEv8HDvt_qWiGoAEwywt_DitlghNmzsgAYtHo4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idFactura",
+									"value": "60aaa4965482cd0790676ce1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/finalzarFactura",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"finalzarFactura"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
